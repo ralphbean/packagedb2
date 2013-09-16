@@ -1040,7 +1040,7 @@ class Log(BASE):
         if from_date:
             query = query.filter(cls.change_time <= from_date)
 
-        query = query.order_by(cls.change_time.desc())
+        query = query.order_by(cls.change_time.asc())
 
         if offset:
             query = query.offset(offset)
