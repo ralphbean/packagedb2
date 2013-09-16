@@ -231,7 +231,7 @@ class PackageListingAcl(BASE):
                        nullable=False)
 
     date_created = sa.Column(sa.DateTime, nullable=False,
-                             default=datetime.datetime.utcnow())
+                             default=datetime.datetime.utcnow)
 
     packagelist = relation('PackageListing')
 
@@ -415,7 +415,7 @@ class Collection(BASE):
     git_branch_name = sa.Column(sa.Text)
 
     date_created = sa.Column(sa.DateTime, nullable=False,
-                             default=datetime.datetime.utcnow())
+                             default=datetime.datetime.utcnow)
 
     __table_args__ = (
         sa.UniqueConstraint('name', 'version'),
@@ -545,7 +545,7 @@ class PackageListing(BASE):
     status = sa.Column(sa.String(50), sa.ForeignKey('PkgStatus.status'),
                        nullable=False)
     status_change = sa.Column(sa.DateTime, nullable=False,
-                              default=datetime.datetime.utcnow())
+                              default=datetime.datetime.utcnow)
     __table_args__ = (
         sa.UniqueConstraint('package_id', 'collection_id'),
     )
@@ -836,7 +836,7 @@ class Package(BASE):
     listings = relation(PackageListing)
 
     date_created = sa.Column(sa.DateTime, nullable=False,
-                             default=datetime.datetime.utcnow())
+                             default=datetime.datetime.utcnow)
 
     @classmethod
     def by_name(cls, session, pkgname):
@@ -993,7 +993,7 @@ class Log(BASE):
     id = sa.Column(sa.Integer, nullable=False, primary_key=True)
     user = sa.Column(sa.String(32), nullable=False)
     change_time = sa.Column(sa.DateTime, nullable=False,
-                            default=datetime.datetime.utcnow())
+                            default=datetime.datetime.utcnow)
     package_id = sa.Column(sa.Integer,
                            sa.ForeignKey('Package.id',
                                          ondelete='RESTRICT',
