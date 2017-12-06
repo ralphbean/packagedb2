@@ -4,7 +4,9 @@ Pkgdb2
 The Pkgdb project is the application handling who is allowed to work on
 which package present in the Fedora repositories.
 
-
+.. note:: As of August 4th 2017 the Fedora Project instance of PkgDB is in
+   read-only mode. More information can be found at:
+   https://fedoraproject.org/wiki/Infrastructure/WhatHappenedToPkgdb
 
 Resources:
 

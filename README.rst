@@ -4,6 +4,10 @@ Fedora PackageDB
 PackageDB2 is a rewrite of `packagedb <https://fedorahosted.org/packagedb/>`_
 using flask.
 
+.. note:: As of August 4th 2017 the Fedora Project instance of PkgDB is in
+   read-only mode. More information can be found at:
+   https://fedoraproject.org/wiki/Infrastructure/WhatHappenedToPkgdb
+
 PackageDB is the package database for Fedora.
 
 It is the application handling who is allowed to commit on the git of the
